@@ -9,12 +9,13 @@ function buildDom(html) {
 function main() {
 
   var splashMain;
-  var gameMain;
+  var game; // instance of Game
   var gameOverMain;
 
   // -- splash
 
   function buildSplash() {
+    
     splashMain = buildDom(`
     <main>
       <h1>up or down</h1>
@@ -37,15 +38,9 @@ function main() {
   function startGame() {
     destroySplash();
     destroyGameOver();
-  
-    // @todo temporary!!! move to Game.js
-    gameMain = buildDom(`
-    <main>
-    <h1>this is the game, lol</h1>
-    </main>
-    `);
 
-    document.body.appendChild(gameMain);
+    game = new Game();
+    game.start();
 
     window.setTimeout(function () {
       gameOver();
@@ -53,7 +48,7 @@ function main() {
   }
 
   function destroyGame() {
-    gameMain.remove();
+    game.destroy();
   }
 
     // -- game over
