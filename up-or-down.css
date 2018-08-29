@@ -86,9 +86,95 @@ p {
   background-color: #fff;
 }
 
+.game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.game .score {
+
+}
+
+.game .label {
+
+}
+
+.game .value {
+
+}
+
+.game .timer {
+
+}
+
+.game .deck {
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.game .card {
+  height: 200px;
+  line-height: 200px;
+  font-size: 50px;
+  border: 1px solid #ccc;
+  background-color: #eeeeee;
+  box-shadow: 2px 2px 2px
+}
+
+.game .current-card {
+  flex: 1;
+}
+
+.game .actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.game .actions button {
+  flex: 1;
+  height: 80px;
+  background-color: hsl(60, 100%, 50%);
+  margin: 20px 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.game .actions button:hover {
+  background-color: hsl(60, 100%, 80%);
+}
+
+.game .actions button:active {
+  background-color: hsl(60, 100%, 40%);
+}
+
+.game .next-card {
+  flex: 1;
+}
+
+.game .up {
+
+}
+
+.game .down {
+  
+}
+
+.game .footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ---- section ---- */
 
 
 section.testimonials .button {
   margin-bottom: 10px;
 }
+
