@@ -74,7 +74,7 @@ function main() {
     button.addEventListener('click', startGame);    
     
     var span = gameOverMain.querySelector('span');
-    span.innerText = username +' your score is: ' + score + ' !!!!';
+    span.innerText =' your score is: ' + score + ' !!!!';
 
     document.body.appendChild(gameOverMain);
   }
