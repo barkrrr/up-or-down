@@ -15,10 +15,10 @@ function main() {
   // -- splash
 
   function buildSplash() {
-    
+
     splashMain = buildDom(`
     <main>
-      <h1>up or down</h1>
+      <h1>Up or Down</h1>
       <button>Start</button>
     </main>
     `);
@@ -41,10 +41,9 @@ function main() {
 
     game = new Game();
     game.start();
-
-    window.setTimeout(function () {
+    game.onOver(function () {
       gameOver();
-    }, 3000)
+    })
   }
 
   function destroyGame() {
@@ -65,15 +64,18 @@ function main() {
 
     gameOverMain = buildDom(`
     <main>
-    <h1>game over</h1>
-    <p>your score ` + score + `</p>
+    <h1>Game over</h1>
+    <p><span></span></p>
     <button>Restart</button>
     </main>
     `);
 
     var button = gameOverMain.querySelector('button');
-    button.addEventListener('click', startGame);
+    button.addEventListener('click', startGame);    
     
+    var span = gameOverMain.querySelector('span');
+    span.innerText = username +' your score is: ' + score + ' !!!!';
+
     document.body.appendChild(gameOverMain);
   }
 
